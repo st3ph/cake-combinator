@@ -156,6 +156,22 @@ class CombinatorHelper extends Helper {
         }
     }
 
+    /**
+    *
+    *   Added a function to clear the libs for a new compact file
+    *   Call this after echo'ing the libs to start adding libs again
+    *
+    *   Author:     Christian Vermeulen
+    *   Contact:    info@christianvermeulen.net
+    *   Date:       July 13th, 2012
+	*
+	*	@Params:	$type (string)
+    **/
+    function clear_libs($type)
+    {
+        $this->libs[$type] = array();
+    }
+
     function add_inline_code($type, $codes) { 
         switch($type) { 
             case 'js': 
